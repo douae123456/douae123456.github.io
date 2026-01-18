@@ -130,3 +130,202 @@ footer { text-align:center; padding:20px; background:#1e1e2f; color:white; margi
 /* Animations */
 @keyframes fadeInDown { from{opacity:0; transform:translateY(-30px);} to{opacity:1; transform:translateY(0);} }
 @keyframes fadeInRight { from{opacity:0; transform:translateX(50px);} to{opacity:1; transform:translateX(0);} }
+
+/* =======================
+   Responsive – Tablette
+   ======================= */
+@media (max-width: 1024px) {
+
+    .nav-container {
+        padding: 0 20px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .intro h1 {
+        font-size: 2.4em;
+    }
+
+    .profile-pic img {
+        width: 150px;
+    }
+
+    .projects-container {
+        justify-content: center;
+    }
+
+    .project-card {
+        width: 320px;
+    }
+
+    section {
+        padding: 0 30px;
+    }
+}
+
+/* =======================
+   Responsive – Mobile
+   ======================= */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .nav-links {
+        display: none; /* menu simple pour mobile */
+    }
+
+    .nav-logo {
+        font-size: 1.2em;
+    }
+
+    /* Header */
+    header {
+        padding: 100px 15px 50px;
+    }
+
+    .intro h1 {
+        font-size: 2em;
+    }
+
+    .intro p {
+        font-size: 0.95rem;
+    }
+
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .buttons .btn {
+        margin: 0;
+        width: 140px;
+        text-align: center;
+    }
+
+    .profile-pic img {
+        width: 130px;
+    }
+
+    /* Sections */
+    section {
+        margin: 40px auto;
+        padding: 0 15px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    /* About */
+    .about-card {
+        padding: 20px;
+        font-size: 0.95rem;
+    }
+
+    /* Projects */
+    .project-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* Skills */
+    .skills-block h3 {
+        font-size: 1.1rem;
+    }
+
+    .skill-list span {
+        font-size: 0.85rem;
+        padding: 7px 14px;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.85rem;
+    }
+}
+
+/* =======================
+   Très petits écrans
+   ======================= */
+@media (max-width: 480px) {
+
+    .intro h1 {
+        font-size: 1.8em;
+    }
+
+    .buttons .btn {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .profile-pic img {
+        width: 110px;
+    }
+}
+
+/* =====================
+   Hamburger menu
+   ===================== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 26px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #1e1e2f;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 0;
+
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+        animation: slideDown 0.3s ease;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+    }
+}
+
+/* Animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
