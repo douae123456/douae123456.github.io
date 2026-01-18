@@ -19,3 +19,17 @@ window.addEventListener('scroll', () => {
         navbar.style.padding = "15px 0";
     }
 });
+
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+/* Fermer le menu après clic */
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});
